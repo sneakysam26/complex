@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Top 5 Honeymoon Destinations</title>
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@3.0.0/reset.min.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
+		<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@2.0.0-beta.3/dist/leaflet.css" crossorigin="anonymous">
+		<link rel="stylesheet" href="/assets/css/style.css">
+	</head>
+	<body>
+
+		<header class="hero">
+			<h1>Top 5 Honeymoon Destinations</h1>
+			<p>Discover the differences between these incredible places for newlyweds or those looking for an unforgettable adventure.</p>
+		</header>
+
+		<div class="glide">
+			<div class="glide__track" data-glide-el="track">
+				<ul class="glide__slides">
+					<li class="glide__slide" data-target="japan-section"><img src="/assets/images/japan.webp" alt="Japan"></li>
+					<li class="glide__slide" data-target="paris-section"><img src="/assets/images/paris.jpg" alt="Paris"></li>
+					<li class="glide__slide" data-target="santorini-section"><img src="/assets/images/santorini.jpg" alt="Santorini"></li>
+					<li class="glide__slide" data-target="maldives-section"><img src="/assets/images/maldives.jpg" alt="Maldives"></li>
+					<li class="glide__slide" data-target="bali-section"><img src="/assets/images/bali.jpg" alt="Bali"></li>
+				</ul>
+			</div>
+		<div class="glide__arrows" data-glide-el="controls">
+			<button class="glide__arrow glide__arrow--left" data-glide-dir="<">&#10094;</button>
+			<button class="glide__arrow glide__arrow--right" data-glide-dir=">">&#10095;</button>
+		</div>
+	</div>
+
+		<main class="destinations-wrapper">
+
+			<!-- Japan -->
+			<section id="japan-section" class="destination-card" data-aos="fade-up">
+				<div class="destination-header">
+					<h2>Explore Japan</h2>
+					<p>Discover serene temples, vibrant cities, and cherry blossom views.</p>
+				</div>
+				<div class="destination-grid">
+					<div id="map" class="destination-map"></div>
+					<div class="chart-wrapper">
+						<div class="chart-container">
+							<canvas id="travelChart"></canvas>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Paris -->
+			<section id="paris-section" class="destination-card" data-aos="fade-up">
+				<div class="destination-header">
+					<h2>Paris Awaits</h2>
+					<p>Soak up world-class art, romantic architecture, and timeless cuisine.</p>
+				</div>
+				<div class="destination-grid">
+					<div id="map2" class="destination-map"></div>
+					<div class="chart-wrapper">
+						<div class="chart-container">
+							<canvas id="travelChart2"></canvas>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Santorini -->
+			<section id="santorini-section" class="destination-card" data-aos="fade-up">
+				<div class="destination-header">
+					<h2>Explore Santorini</h2>
+					<p>Experience cliffside sunsets, whitewashed villages, and Aegean breezes.</p>
+				</div>
+				<div class="destination-grid">
+					<div id="map3" class="destination-map"></div>
+					<div class="chart-wrapper">
+						<div class="chart-container">
+							<canvas id="travelChart3"></canvas>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Maldives -->
+			<section id="maldives-section" class="destination-card" data-aos="fade-up">
+				<div class="destination-header">
+					<h2>Explore Maldives</h2>
+					<p>Relax in overwater bungalows surrounded by crystal-clear turquoise lagoons.</p>
+				</div>
+				<div class="destination-grid">
+					<div id="map4" class="destination-map"></div>
+					<div class="chart-wrapper">
+						<div class="chart-container">
+							<canvas id="travelChart4"></canvas>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Bali -->
+			<section id="bali-section" class="destination-card" data-aos="fade-up">
+				<div class="destination-header">
+					<h2>Explore Bali</h2>
+					<p>Unwind among lush terraced jungles, tranquil beaches, and luxury villas.</p>
+				</div>
+				<div class="destination-grid">
+					<div id="map5" class="destination-map"></div>
+					<div class="chart-wrapper">
+						<div class="chart-container">
+							<canvas id="travelChart5"></canvas>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</main>
+
+		<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/leaflet@2.0.0-beta.3/dist/leaflet-global.js" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@4.6.1/dist/chart.umd.min.js"></script>
+		<script src="/assets/js/main.js"></script>
+	</body>
+</html>

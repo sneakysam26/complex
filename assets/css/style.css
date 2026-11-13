@@ -1,0 +1,280 @@
+:root {
+  --bg-primary: #264143;
+  --bg-secondary: #1b2e30;
+  --card-bg: rgba(255, 255, 255, 0.10);
+  --card-border: rgba(255, 255, 255, 0.15);
+  --accent-gold: #e9c46a;
+  --text-light: #f8fafc;
+  --text-muted: #cbd5e1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(160deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 56px 16px 36px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  font-weight: 300;
+}
+
+/* Sleek Carousel */
+.glide {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 55px;
+  padding: 0 12px;
+}
+
+.glide__slide {
+  cursor: pointer;
+}
+
+.glide__slide img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.glide__slide:hover img {
+  transform: scale(1.02);
+}
+
+.destination-card {
+  scroll-margin-top: 24px;
+  /* ... keep your existing .destination-card styles ... */
+}
+
+
+.glide__track {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.glide__slide img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.glide__arrow {
+  background: rgba(27, 46, 48, 0.65);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+}
+
+.glide__arrow:hover {
+  background: var(--accent-gold);
+  color: #1b2e30;
+  border-color: var(--accent-gold);
+}
+
+/* Destination Cards (Mobile-First Defaults) */
+.destinations-wrapper {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 12px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.destination-card {
+  width: 100%;
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+  padding: 20px 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.destination-header {
+  text-align: center;
+  margin-bottom: 24px;
+  padding: 0 6px;
+}
+
+.destination-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.85rem;
+  font-weight: 600;
+  color: var(--accent-gold);
+  margin-bottom: 10px;
+}
+
+.destination-header p {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+}
+
+.destination-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.destination-map {
+  width: 100%;
+  min-width: 0;
+  height: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.chart-wrapper {
+  width: 100%;
+  min-width: 0;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--card-border);
+  border-radius: 15px;
+  padding: 15px 10px;
+}
+
+.chart-wrapper h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.chart-container {
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+
+/* Desktop & Large Tablet Enhancements */
+@media (min-width: 850px) {
+  .hero {
+    padding: 80px 20px 50px;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .glide {
+    margin: 0 auto 80px;
+    padding: 0 20px;
+  }
+
+  .glide__track {
+    border-radius: 20px;
+  }
+
+  .glide__slide img {
+    height: 520px;
+  }
+
+  .glide__arrow {
+    width: 44px;
+    height: 44px;
+    font-size: 1rem;
+  }
+
+  .destinations-wrapper {
+    padding: 0 20px 100px;
+    gap: 64px;
+  }
+
+  .destination-card {
+    border-radius: 25px;
+    padding: 35px;
+  }
+
+  .destination-header {
+    margin-bottom: 30px;
+  }
+
+  .destination-header h2 {
+    font-size: 2rem;
+  }
+
+  .destination-header p {
+    font-size: 1rem;
+  }
+
+  .destination-grid {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 30px;
+  }
+
+  .destination-map,
+  .chart-wrapper {
+    flex: 1 1 0%;
+    min-width: 0;
+  }
+
+  .destination-map {
+    height: 330px;
+    border-radius: 15px;
+  }
+
+  .chart-wrapper {
+    border-radius: 15px;
+    padding: 20px;
+  }
+
+  .chart-wrapper h3 {
+    font-size: 0.1rem;
+    margin-bottom: 15px;
+  }
+
+  .chart-container {
+    height: 260px;
+  }
+}
