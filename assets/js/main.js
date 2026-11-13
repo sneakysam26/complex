@@ -1,4 +1,4 @@
-// Initialize Glide Carousel
+// Glide Carousel
 const glide = new Glide('.glide', {
 	type: 'carousel',
 	perView: 1,
@@ -7,7 +7,7 @@ const glide = new Glide('.glide', {
 });
 glide.mount();
 
-// Scrolls to destination card when clicking a Glide slide
+// Scrolls to destination card after clicking a Glide slide
 const glideSlides = document.querySelector('.glide__slides');
 
 if (glideSlides) {
@@ -24,13 +24,13 @@ if (glideSlides) {
 	});
 }
 
-// Initialize AOS Scroll Animations
+// AOS Scroll Animations
 AOS.init({
 	duration: 800,
 	once: false
 });
 
-// Helper Function for Leaflet Maps
+// Leaflet Maps
 function createDestinationMap(elementId, coords, zoom = 10) {
 	const map = new L.LeafletMap(elementId, {
 		scrollWheelZoom: false // Prevents accidental zooming while scrolling the page
@@ -48,7 +48,7 @@ createDestinationMap('map3', [36.393154, 25.461510]); // Santorini
 createDestinationMap('map4', [4.175, 73.509]);       // Maldives
 createDestinationMap('map5', [-8.409518, 115.188919]); // Bali
 
-// Bar Charts Function
+// Bar Charts
 function createTravelChart(canvasId, ratings) {
 	const ctx = document.getElementById(canvasId);
 	if (!ctx) return;
@@ -110,7 +110,7 @@ function createTravelChart(canvasId, ratings) {
 	});
 }
 
-// Create all 5 charts with seasonal ratings
+// Seasonal Ratings
 createTravelChart('travelChart', [9, 6, 10, 5]);   // Japan
 createTravelChart('travelChart2', [9, 8, 8, 5]);   // Paris
 createTravelChart('travelChart3', [8, 10, 9, 4]);  // Santorini
